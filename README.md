@@ -1,27 +1,36 @@
-# TP1 – Introduction à la sécurité informatique
+# Introduction à la sécurité informatique
 
-TP réalisé en binôme en **L3 Informatique** (Université de Limoges). Tous les programmes sont écrits en **Python**.
+Dépôt regroupant les TP de la matière **Introduction à la sécurité informatique**,
+réalisés en binôme en **L3 Informatique** (Université de Limoges).
+Les programmes sont écrits en **Python**.
 
-## Objectif
+## Sommaire des TP
 
-Mettre en pratique des attaques classiques sur des mots de passe et des chiffrements simples :
-cryptanalyse de César et de Vigenère, attaque par dictionnaire, force brute sur une archive zip et sur un code PIN.
+| TP | Thème | Statut |
+|----|-------|--------|
+| [TP1](#tp1--cryptanalyse-et-mots-de-passe-faibles) | Cryptanalyse (César, Vigenère), force brute sur MD5, zip et PIN | Terminé |
+| TP2 | À venir | En cours |
 
 ## Contenu du dépôt
 
 ```
 SI/
-├── rapport_tp1.pdf      # Rapport détaillé du TP
-├── archive.zip          # Archive protégée par mot de passe (exercice 3)
+├── rapport_tp1.pdf        # Rapport du TP1
+├── archive.zip            # Archive protégée par mot de passe (TP1, exercice 3)
 └── TP1/
-    ├── exo1.py          # Exercice 1 : César et Vigenère
-    ├── exo2.py          # Exercice 2 : mot de passe faible (MD5)
-    ├── exo3.py          # Exercice 3 : archive zip protégée
-    ├── exo4.py          # Exercice 4 : authentification (PIN)
+    ├── exo1.py            # Exercice 1 : César et Vigenère
+    ├── exo2.py            # Exercice 2 : mot de passe faible (MD5)
+    ├── exo3.py            # Exercice 3 : archive zip protégée
+    ├── exo4.py            # Exercice 4 : authentification (PIN)
     └── exemple_client.py  # Exemple de client socket
 ```
 
-## Exercices
+---
+
+## TP1 – Cryptanalyse et mots de passe faibles
+
+**Objectif :** mettre en pratique des attaques classiques sur des chiffrements simples
+et des mots de passe faibles.
 
 ### Exercice 1 : Cryptanalyse de César et de Vigenère
 - Chiffrement et déchiffrement de César et de Vigenère
@@ -39,27 +48,30 @@ Force brute récursive pour retrouver le mot de passe de `archive.zip` (biblioth
 ### Exercice 4 : Authentification
 Force brute des 10 000 codes PIN possibles sur un service accessible par socket.
 
-## Utilisation
+### Utilisation
 
 ```bash
+cd SI/TP1
 python3 exo1.py
 python3 exo2.py
 python3 exo3.py
 python3 exo4.py
 ```
 
-## Remarque
+### Remarque
 
 Le fichier `rockyou.txt` (liste de mots de passe utilisée à l'exercice 2) n'est **pas inclus**
 dans ce dépôt car il est trop volumineux (plus de 100 Mo). Il est disponible publiquement
-sur internet. Pour tester l'exercice 2, télécharge-le et place-le dans le même dossier que `exo2.py`.
+sur internet. Pour tester l'exercice 2, télécharge-le et place-le à l'endroit attendu par `exo2.py`.
 
-## Rapport
+### Rapport
 
 Le rapport complet (explications, méthodes et résultats) est disponible dans [`SI/rapport_tp1.pdf`](SI/rapport_tp1.pdf).
 
+---
+
 ## Auteures
 
-TP réalisé en binôme par :
+Dépôt réalisé en binôme par :
 - Hadja Fatima – L3 Informatique, Université de Limoges
 - KPARA Hamoudalath – L3 Informatique, Université de Limoges
